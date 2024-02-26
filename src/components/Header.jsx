@@ -1,8 +1,7 @@
 import styles from "./Header.module.css";
-import { Link, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-const Header = ({ selectedPage, setSelectedPage }) => {
+const Header = () => {
   return (
     <>
       <div className={styles.header}>
@@ -10,28 +9,22 @@ const Header = ({ selectedPage, setSelectedPage }) => {
           <div className={styles.title}>FakeShop</div>
         </div>
         <div className={styles.headerSubContainers}>
-          <Link
-            className={
-              selectedPage === "Home"
-                ? `${styles.navLink} ${styles.selected}`
-                : styles.navLink
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${styles.navLink} ${styles.selected}` : styles.navLink
             }
             to={"/"}
-            onClick={() => setSelectedPage("Home")}
           >
             Home
-          </Link>
-          <Link
-            className={
-              selectedPage === "Shop"
-                ? `${styles.navLink} ${styles.selected}`
-                : styles.navLink
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${styles.navLink} ${styles.selected}` : styles.navLink
             }
             to={"Shop"}
-            onClick={() => setSelectedPage("Shop")}
           >
             Shop
-          </Link>
+          </NavLink>
         </div>
         <div className={styles.headerSubContainers}>
           <div>bag</div>
