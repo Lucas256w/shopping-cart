@@ -1,7 +1,16 @@
+import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
+import Header from "./components/Header";
 
-import "./App.css";
+const App = () => {
+  const [selectedPage, setSelectedPage] = useState("Home");
 
-function App() {}
+  return (
+    <>
+      <Header selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      <Outlet />
+    </>
+  );
+};
 
 export default App;
