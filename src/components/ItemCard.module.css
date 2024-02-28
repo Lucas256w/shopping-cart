@@ -1,0 +1,76 @@
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.imageContainer {
+  border-bottom: 2px solid black;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.rating {
+  justify-self: end;
+}
+
+.name {
+  font-weight: 700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  width: 16px;
+}
+
+.priceAndQuant {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  height: 24px;
+  width: 24px;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}
+
+.addCart {
+  margin-top: 16px;
+  width: auto;
+  height: auto;
+  padding: 8px;
+}
+
+.editQuant {
+  display: flex;
+  gap: 6px;
+}
