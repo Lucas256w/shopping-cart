@@ -1,6 +1,7 @@
 .cartContainer {
   position: absolute;
   z-index: 1;
+  min-height: 100%;
   background-color: white;
   width: 350px;
   right: 0;
@@ -78,7 +79,6 @@
   position: absolute;
   top: -10px;
   left: -10px;
-  border: 1px solid black;
   width: 20px;
   height: 20px;
   border-radius: 50%;

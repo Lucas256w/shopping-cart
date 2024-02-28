@@ -48,3 +48,32 @@
 .selected {
   font-weight: 700;
 }
+
+.svg {
+  height: 30px;
+  width: 30px;
+}
+
+.svg:hover {
+  cursor: pointer;
+}
+
+.cartLogoContainer {
+  position: relative;
+}
+
+.cartQuantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}

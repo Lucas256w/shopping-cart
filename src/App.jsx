@@ -11,18 +11,6 @@ const App = () => {
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
-  // useEffect(() => {
-  //   // Prevent body from scrolling when cart is shown
-  //   if (showCart) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //   }
-  //   return () => {
-  //     document.body.style.overflow = "auto";
-  //   };
-  // }, [showCart]);
-
   const handleAddCart = (name, price, imageUrl, quantity) => {
     for (let i = 0; i < cart.length; i++) {
       if (name === cart[i].name) {
@@ -47,7 +35,7 @@ const App = () => {
   const { name } = useParams();
   return (
     <div className={styles.root}>
-      <Header setShowCart={setShowCart} />
+      <Header cart={cart} setShowCart={setShowCart} />
       {name === "Shop" ? <Shop handleAddCart={handleAddCart} /> : <Home />}
       {showCart && (
         <>

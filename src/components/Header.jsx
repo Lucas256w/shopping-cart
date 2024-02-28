@@ -1,7 +1,9 @@
 import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
+import cartLogo from "/cart.svg";
+import searchLogo from "/search.svg";
 
-const Header = ({ setShowCart }) => {
+const Header = ({ setShowCart, cart }) => {
   return (
     <>
       <div className={styles.header}>
@@ -27,8 +29,18 @@ const Header = ({ setShowCart }) => {
           </NavLink>
         </div>
         <div className={styles.headerSubContainers}>
-          <div onClick={() => setShowCart(true)}>bag</div>
-          <div>search</div>
+          <div className={styles.cartLogoContainer}>
+            <img
+              className={styles.svg}
+              onClick={() => setShowCart(true)}
+              src={cartLogo}
+              alt="cart"
+            />
+            <div className={styles.cartQuantity}>
+              {cart.reduce((acc, item) => acc + item.quantity, 0)}
+            </div>
+          </div>
+          <img className={styles.svg} src={searchLogo} alt="search" />
         </div>
       </div>
     </>
