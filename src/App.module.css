@@ -7,9 +7,11 @@
 }
 
 .background {
-  position: absolute;
-  background-color: black;
+  position: fixed; /* Changed from absolute to fixed */
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 100vh;
-  opacity: 50%;
+  height: 100vh; /* Cover the full viewport height */
+  background-color: black;
+  opacity: 0.5; /* Use decimal for opacity (50% -> 0.5) */
 }

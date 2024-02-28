@@ -39,7 +39,14 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+  text-align: center;
   width: 16px;
+}
+
+input:focus {
+  outline: 1px solid black;
+  border-color: black;
+  border-radius: 5px;
 }
 
 .priceAndQuant {

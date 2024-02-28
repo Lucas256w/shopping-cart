@@ -23,7 +23,7 @@ const useItemData = () => {
   return { data, error, loading };
 };
 
-const Shop = () => {
+const Shop = ({ handleAddCart }) => {
   const { data, error, loading } = useItemData();
   if (loading) return <div>Loading...</div>;
 
@@ -38,6 +38,7 @@ const Shop = () => {
             price={item.price}
             name={item.title}
             rating={item.rating.rate}
+            handleAddCart={handleAddCart}
           />
         ))}
       </div>

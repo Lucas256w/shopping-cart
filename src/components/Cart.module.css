@@ -1,6 +1,5 @@
 .cartContainer {
   position: absolute;
-  height: 100vh;
   z-index: 1;
   background-color: white;
   width: 350px;
@@ -18,6 +17,7 @@
   font-weight: 600;
   border-bottom: 1px solid black;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .total {
@@ -41,4 +41,49 @@
 .btn:hover {
   cursor: pointer;
   filter: brightness(90%);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 50px;
+}
+
+.itemContainer {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-left: auto;
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  min-width: 60px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.quantity {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-weight: 500;
 }

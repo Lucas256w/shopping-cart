@@ -1,6 +1,35 @@
 import styles from "./ItemCard.module.css";
+import { useState } from "react";
 
-const ItemCard = ({ imageUrl, name, price, rating }) => {
+const ItemCard = ({ imageUrl, name, price, rating, handleAddCart }) => {
+  const [input, setInput] = useState(1);
+
+  const handleInc = () => {
+    if (input < 9) {
+      setInput(input + 1);
+    }
+  };
+
+  const handleDec = () => {
+    if (input > 1) {
+      setInput(input - 1);
+    }
+  };
+
+  const handleValueChange = (e) => {
+    if (e.target.value >= 0 && e.target.value <= 9) {
+      setInput(e.target.value);
+    } else if (e.target.value === "") {
+      setInput(1);
+    }
+  };
+
+  const handleBlur = () => {
+    if (input === "" || input < 1 || input > 9) {
+      setInput(1);
+    }
+  };
+
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
@@ -13,12 +42,26 @@ const ItemCard = ({ imageUrl, name, price, rating }) => {
       <div className={styles.priceAndQuant}>
         <div>${price}</div>
         <div className={styles.editQuant}>
-          <button className={styles.btn}>-</button>
-          <input type="number" />
-          <button className={styles.btn}>+</button>
+          <button onClick={handleDec} className={styles.btn}>
+            -
+          </button>
+          <input
+            onChange={(e) => handleValueChange(e)}
+            onBlur={handleBlur}
+            type="number"
+            value={input}
+          />
+          <button onClick={handleInc} className={styles.btn}>
+            +
+          </button>
         </div>
       </div>
-      <button className={`${styles.addCart} ${styles.btn}`}>Add to Cart</button>
+      <button
+        onClick={() => handleAddCart(name, price, imageUrl, input)}
+        className={`${styles.addCart} ${styles.btn}`}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 };
