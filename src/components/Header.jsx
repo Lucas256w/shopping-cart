@@ -8,7 +8,7 @@ const Header = () => {
         <div className={styles.headerSubContainers}>
           <div className={styles.title}>FakeShop</div>
         </div>
-        <div className={styles.headerSubContainers}>
+        <div className={`${styles.headerSubContainers} ${styles.middle}`}>
           <NavLink
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.selected}` : styles.navLink
@@ -21,7 +21,7 @@ const Header = () => {
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.selected}` : styles.navLink
             }
-            to={"Shop"}
+            to={"/Shop"}
           >
             Shop
           </NavLink>

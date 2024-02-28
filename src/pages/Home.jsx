@@ -14,7 +14,7 @@ const Home = ({ setSelectedPage }) => {
           deliver the best we have to offer to our loyal consumers
         </div>
         <div className={styles.btnContainer}>
-          <Link to={"Shop"} className={styles.btn}>
+          <Link to={"/Shop"} className={styles.btn}>
             Explore Now
           </Link>
         </div>

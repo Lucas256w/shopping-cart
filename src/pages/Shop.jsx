@@ -29,7 +29,7 @@ const Shop = () => {
 
   return (
     <>
-      <div>Our best collection</div>
+      <div className={styles.title}>Our best collection</div>
       <div className={styles.cardsContainer}>
         {data.map((item) => (
           <ItemCard
