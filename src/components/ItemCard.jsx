@@ -13,12 +13,12 @@ const ItemCard = ({ imageUrl, name, price, rating }) => {
       <div className={styles.priceAndQuant}>
         <div>${price}</div>
         <div className={styles.editQuant}>
-          <button>-</button>
+          <button className={styles.btn}>-</button>
           <input type="number" />
-          <button>+</button>
+          <button className={styles.btn}>+</button>
         </div>
       </div>
-      <button className={styles.addCart}>Add to Cart</button>
+      <button className={`${styles.addCart} ${styles.btn}`}>Add to Cart</button>
     </div>
   );
 };

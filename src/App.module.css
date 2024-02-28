@@ -1,0 +1,15 @@
+.root {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background {
+  position: absolute;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  opacity: 50%;
+}

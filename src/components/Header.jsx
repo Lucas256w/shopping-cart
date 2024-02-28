@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ setShowCart }) => {
   return (
     <>
       <div className={styles.header}>
@@ -27,7 +27,7 @@ const Header = () => {
           </NavLink>
         </div>
         <div className={styles.headerSubContainers}>
-          <div>bag</div>
+          <div onClick={() => setShowCart(true)}>bag</div>
           <div>search</div>
         </div>
       </div>
