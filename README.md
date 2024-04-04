@@ -1,6 +1,6 @@
 # shopping-cart
 
-## <a href="https://cv-application-lucas256w.netlify.app/](https://fakeshop-jiahao-huamani.netlify.app/">Live Demo</a>
+## <a href="https://fakeshop-jiahao-huamani.netlify.app/">Live Demo</a>
 <div style="display: flex; flex-direction: row; align-items: flex-start;">
     <img width="350" alt="image" src="https://github.com/Lucas256w/shopping-cart/assets/112456075/9c128c0b-ab0d-4001-a8ee-75adfd26adf3">
     <img width="350" alt="image" src="https://github.com/Lucas256w/shopping-cart/assets/112456075/e02c2d29-ffb5-4559-b654-af93ab7e1ddd">
